@@ -640,7 +640,7 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
     width:82px;
     height:120px;
     left:50%;
-    top:28px;
+    top:68px;
     margin-left:-41px;
     border-radius:100px 100px 25px 25px;
     background:linear-gradient(#ff91c2,#ff5ca0);
@@ -648,12 +648,12 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
     opacity:0;
 }
 
-.p1{transform:rotate(0deg) translateY(-42px) scale(.1);animation:petal .6s forwards 1.5s;}
-.p2{transform:rotate(60deg) translateY(-42px) scale(.1);animation:petal .6s forwards 1.6s;}
-.p3{transform:rotate(120deg) translateY(-42px) scale(.1);animation:petal .6s forwards 1.7s;}
-.p4{transform:rotate(180deg) translateY(-42px) scale(.1);animation:petal .6s forwards 1.8s;}
-.p5{transform:rotate(240deg) translateY(-42px) scale(.1);animation:petal .6s forwards 1.9s;}
-.p6{transform:rotate(300deg) translateY(-42px) scale(.1);animation:petal .6s forwards 2s;}
+.p1{transform:rotate(0deg) translateY(-58px) scale(.1);animation:petal .6s forwards 1.5s;}
+.p2{transform:rotate(60deg) translateY(-58px) scale(.1);animation:petal .6s forwards 1.6s;}
+.p3{transform:rotate(120deg) translateY(-58px) scale(.1);animation:petal .6s forwards 1.7s;}
+.p4{transform:rotate(180deg) translateY(-58px) scale(.1);animation:petal .6s forwards 1.8s;}
+.p5{transform:rotate(240deg) translateY(-58px) scale(.1);animation:petal .6s forwards 1.9s;}
+.p6{transform:rotate(300deg) translateY(-58px) scale(.1);animation:petal .6s forwards 2s;}
 
 @keyframes petal{
     0%{
