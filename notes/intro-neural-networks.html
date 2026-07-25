@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intro to Neural Networks — Rittwika</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&family=Quicksand:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-logo">rittwika<span>.dev</span></a>
+    <ul class="nav-links" style="max-height:none;position:static;flex-direction:row;background:none;">
+      <li><a href="../notes.html">All notes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="note-page">
+  <a href="../notes.html" class="back-link">&larr; Back to all notes</a>
+
+  <p class="eyebrow">AI / ML</p>
+  <h1>Intro to Neural Networks</h1>
+  <div class="note-meta">
+    <span>Tags: neural networks, deep learning, ML basics</span>
+  </div>
+
+  <p>At its core, a neural network is just a stack of simple functions that learn, by example, how to turn an input into a useful output — no one hand-codes the rules.</p>
+
+  <h2>The building block: a single neuron</h2>
+  <p>One neuron takes several numeric inputs, multiplies each by a learned "weight", adds them up plus a bias term, and passes the result through an activation function that decides how strongly the neuron "fires".</p>
+  <pre><code>output = activation(w1*x1 + w2*x2 + ... + wn*xn + bias)</code></pre>
+  <p>Common activation functions: ReLU (zero out negatives, keep positives as-is), sigmoid (squash to 0–1), and tanh (squash to -1–1).</p>
+
+  <h2>Stacking neurons into layers</h2>
+  <ul>
+    <li><b>Input layer</b> — the raw features (pixels, words, numbers)</li>
+    <li><b>Hidden layer(s)</b> — where the actual pattern-learning happens</li>
+    <li><b>Output layer</b> — the prediction (a class label, a probability, a number)</li>
+  </ul>
+  <p>"Deep" learning just means there are multiple hidden layers stacked between input and output.</p>
+
+  <h2>How it actually learns</h2>
+  <p>Training is a loop:</p>
+  <ol>
+    <li><b>Forward pass</b> — push an input through the network to get a prediction.</li>
+    <li><b>Loss</b> — measure how wrong the prediction was, with a loss function.</li>
+    <li><b>Backpropagation</b> — work backward through the network to figure out how much each weight contributed to the error.</li>
+    <li><b>Update</b> — nudge every weight slightly in the direction that reduces the error (gradient descent).</li>
+  </ol>
+  <p>Repeat this over thousands of examples, and the weights gradually settle into values that generalize to new, unseen inputs.</p>
+
+  <blockquote>A neural network isn't "intelligent" in any human sense — it's a very large, differentiable function being nudged, one gradient step at a time, toward fewer mistakes on the training data.</blockquote>
+
+  <h2>Why this matters for detection tasks</h2>
+  <p>For something like deepfake or misinformation detection, the same idea applies: the network is shown many real and fake examples, learns which patterns in the pixels (or the text) correlate with "fake", and encodes that as weights — nobody writes an explicit rulebook for "what a deepfake looks like".</p>
+
+  <h2>Takeaway</h2>
+  <p>Every neural network, no matter how large, is the same three ideas repeated: weighted sums, non-linear activations, and gradient-based learning from labeled examples.</p>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rittwika.</span>
+      <a href="../notes.html" style="color:var(--sun)">&larr; Back to all notes</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
