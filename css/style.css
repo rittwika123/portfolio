@@ -568,7 +568,7 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
 
 @keyframes growStem{
     to{
-        height:180px;
+        height:150px;
     }
 }
 
@@ -577,14 +577,15 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
 .leaf{
     position:absolute;
     width:55px;
-    height:28px;
+    height:30px;
     background:#67d88a;
     opacity:0;
+    z-index:2;
 }
 
 .leaf.left{
-    left:72px;
-    bottom:90px;
+    left:78px;
+    bottom:70px;
     border-radius:100% 0;
     transform:rotate(-35deg) scale(0);
     animation:leaf .7s forwards;
@@ -592,8 +593,8 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
 }
 
 .leaf.right{
-    right:72px;
-    bottom:130px;
+    right:78px;
+    bottom:105px;
     border-radius:0 100%;
     transform:rotate(35deg) scale(0);
     animation:leaf .7s forwards;
@@ -619,14 +620,13 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
     background:#FFD84D;
     border-radius:50%;
     left:50%;
-    top:58px;
+    top:95px;
     transform:translateX(-50%) scale(0);
     z-index:10;
     box-shadow:0 0 25px rgba(255,220,80,.5);
     animation:centerAppear .5s forwards;
     animation-delay:2s;
 }
-
 @keyframes centerAppear{
     to{
         transform:translateX(-50%) scale(1);
