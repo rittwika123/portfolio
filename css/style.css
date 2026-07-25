@@ -212,12 +212,6 @@ a:focus-visible, button:focus-visible{ outline: 3px solid var(--sun); outline-of
 }
 .btn-ghost:hover{ background: var(--lavender); color:#fff; }
 
-.hero-graph{ width:100%; height:auto; overflow: visible; }
-.petal-path{
-  transform-origin: 190px 150px;
-  opacity: 0;
-  animation: bloom 1s ease forwards;
-}
 @keyframes bloom{
   0%{ opacity:0; transform: scale(0.3) rotate(-20deg); }
   100%{ opacity:1; transform: scale(1) rotate(0deg); }
@@ -541,4 +535,211 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
   section{ padding: 60px 0; }
   .site-footer{ margin: 30px 12px 12px; }
   .stats{ margin: 0 12px; }
+}
+/* ==========================================
+   BLOOMING FLOWER
+========================================== */
+
+.hero-flower{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:420px;
+}
+
+.flower{
+    position:relative;
+    width:320px;
+    height:320px;
+    animation:sway 4s ease-in-out infinite;
+}
+
+@keyframes sway{
+    0%,100%{
+        transform:rotate(-2deg);
+    }
+    50%{
+        transform:rotate(2deg);
+    }
+}
+
+/* Stem */
+
+.stem{
+    position:absolute;
+    width:12px;
+    height:0;
+    left:50%;
+    bottom:20px;
+    transform:translateX(-50%);
+    background:#52c878;
+    border-radius:10px;
+    animation:growStem 1.5s forwards;
+}
+
+@keyframes growStem{
+    to{
+        height:170px;
+    }
+}
+
+/* Leaves */
+
+.leaf{
+    position:absolute;
+    width:55px;
+    height:28px;
+    background:#67d88a;
+    border-radius:50px 0;
+    opacity:0;
+}
+
+.leaf.left{
+    left:120px;
+    bottom:100px;
+    transform:rotate(-35deg) scale(0);
+    animation:leafGrow .8s forwards;
+    animation-delay:1.2s;
+}
+
+.leaf.right{
+    left:160px;
+    bottom:140px;
+    transform:rotate(145deg) scale(0);
+    animation:leafGrow .8s forwards;
+    animation-delay:1.4s;
+}
+
+@keyframes leafGrow{
+    to{
+        opacity:1;
+        transform:rotate(var(--rot,0deg)) scale(1);
+    }
+}
+
+/* Center */
+
+.center{
+    position:absolute;
+    width:55px;
+    height:55px;
+    background:#ffd54a;
+    border-radius:50%;
+    left:50%;
+    top:75px;
+    transform:translateX(-50%) scale(0);
+    z-index:5;
+    animation:centerPop .6s forwards;
+    animation-delay:2.2s;
+}
+
+@keyframes centerPop{
+    to{
+        transform:translateX(-50%) scale(1);
+    }
+}
+
+/* Petals */
+
+.petal{
+    position:absolute;
+    width:80px;
+    height:120px;
+    background:linear-gradient(#ff7fb8,#ff4f90);
+    border-radius:80px 80px 20px 20px;
+    left:50%;
+    top:60px;
+    transform-origin:bottom center;
+    opacity:0;
+}
+
+.p1{
+    transform:translateX(-50%) rotate(0deg) scale(.1);
+    animation:bloom .7s forwards;
+    animation-delay:1.7s;
+}
+
+.p2{
+    transform:translateX(-50%) rotate(60deg) scale(.1);
+    animation:bloom .7s forwards;
+    animation-delay:1.8s;
+}
+
+.p3{
+    transform:translateX(-50%) rotate(120deg) scale(.1);
+    animation:bloom .7s forwards;
+    animation-delay:1.9s;
+}
+
+.p4{
+    transform:translateX(-50%) rotate(180deg) scale(.1);
+    animation:bloom .7s forwards;
+    animation-delay:2s;
+}
+
+.p5{
+    transform:translateX(-50%) rotate(240deg) scale(.1);
+    animation:bloom .7s forwards;
+    animation-delay:2.1s;
+}
+
+.p6{
+    transform:translateX(-50%) rotate(300deg) scale(.1);
+    animation:bloom .7s forwards;
+    animation-delay:2.2s;
+}
+
+@keyframes bloom{
+    0%{
+        opacity:0;
+        transform:translateX(-50%) scale(.1);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(-50%) rotate(var(--angle)) scale(1);
+    }
+}
+
+/* Angles */
+
+.p1{ --angle:0deg; }
+.p2{ --angle:60deg; }
+.p3{ --angle:120deg; }
+.p4{ --angle:180deg; }
+.p5{ --angle:240deg; }
+.p6{ --angle:300deg; }
+
+/* Glow */
+
+.flower::after{
+    content:"";
+    position:absolute;
+    width:200px;
+    height:200px;
+    left:50%;
+    top:20px;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:radial-gradient(rgba(255,180,220,.5),transparent 70%);
+    filter:blur(20px);
+    animation:pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow{
+
+    0%,100%{
+        transform:translateX(-50%) scale(1);
+        opacity:.5;
+    }
+
+    50%{
+        transform:translateX(-50%) scale(1.2);
+        opacity:1;
+    }
+
 }
