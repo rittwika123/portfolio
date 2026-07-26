@@ -619,7 +619,7 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
     height:56px;
     background:#FFD84D;
     border-radius:50%;
-    left:50%;
+    left:90px;
     top:175px;
     transform:translateX(-50%) scale(0);
     z-index:10;
