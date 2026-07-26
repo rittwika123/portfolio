@@ -5,7 +5,7 @@ development notes only. Plain HTML/CSS/JS, no build tools, no npm install.
 Edit any file directly and refresh your browser to see the change.
 
 > **Heads up:** there's a placeholder card for your **conda notes** on both
-> `index.html` and `notes.html` (marked "Coming soon"). Send over the actual
+> `index.html` and `notes.html` (marked "Read note"). Send over the actual
 > content and it'll get turned into a real note page at
 
 
