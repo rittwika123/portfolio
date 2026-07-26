@@ -585,7 +585,7 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
 
 .leaf.left{
     left:78px;
-    bottom:70px;
+    bottom:35px;
     border-radius:100% 0;
     transform:rotate(-35deg) scale(0);
     animation:leaf .7s forwards;
@@ -594,7 +594,7 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
 
 .leaf.right{
     right:78px;
-    bottom:105px;
+    bottom:70px;
     border-radius:0 100%;
     transform:rotate(35deg) scale(0);
     animation:leaf .7s forwards;
@@ -620,7 +620,7 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
     background:#FFD84D;
     border-radius:50%;
     left:50%;
-    top:115px;
+    top:175px;
     transform:translateX(-50%) scale(0);
     z-index:10;
     box-shadow:0 0 25px rgba(255,220,80,.5);
