@@ -639,7 +639,7 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
     position:absolute;
     width:80px;
     height:120px;
-    left:50%;
+    left:58%;
     top:95px;
     margin-left:-40px;
     border-radius:100px 100px 25px 25px;
