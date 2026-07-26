@@ -614,3 +614,11 @@ body.has-custom-cursor a, body.has-custom-cursor button{ cursor: none; }
     }
 
 }
+.hero-brain img{
+    width:380px;
+    animation:brainFloat 6s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 25px rgba(255,180,255,.45))
+        drop-shadow(0 20px 40px rgba(170,180,255,.35));
+}
